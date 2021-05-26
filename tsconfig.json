@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "outDir": "lib",
+    "rootDir": "src",
+    "sourceMap": true,
+    "removeComments": false,
+    "strict": true,
+    "lib": [ "es2020" ],
+    "declaration": true
+  },
+  "include": ["src/**/*"],
+  "compileOnSave": true
+}
