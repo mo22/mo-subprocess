@@ -6,9 +6,10 @@
     "outDir": "lib",
     "rootDir": "src",
     "sourceMap": true,
-    "removeComments": false,
+    "isolatedModules": true,
     "strict": true,
     "lib": [ "es2020" ],
+    "skipLibCheck": true,
     "declaration": true
   },
   "include": ["src/**/*"],
