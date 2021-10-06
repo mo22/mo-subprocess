@@ -1,6 +1,6 @@
 {
   "name": "mo-subprocess",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "child_process wrapper",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -15,10 +15,8 @@
   },
   "homepage": "https://github.com/mo22/mo-subprocess#readme",
   "devDependencies": {
-    "@types/node": "^15.6.1",
-    "typescript": "^4.2.4"
-  },
-  "dependencies": {
+    "@types/node": "^16.10.3",
+    "typescript": "^4.2.4",
     "tmp-promise": "^3.0.2"
   }
 }
