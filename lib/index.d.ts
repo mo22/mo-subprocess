@@ -3,3 +3,4 @@ export * from './WritableBuffer';
 export * from './WritableCallback';
 export * from './WritableLineCallback';
 export * from './WritableLineReader';
+export * from './ReadableWriter';
