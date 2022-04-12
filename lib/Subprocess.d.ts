@@ -9,9 +9,9 @@ export interface SubprocessArgs {
     };
     workingDirectory?: string;
     timeout?: number;
-    stdin?: Buffer | Uint8Array | Readable | 'inherit';
-    stdout?: Writable | 'inherit';
-    stderr?: Writable | 'inherit';
+    stdin?: Buffer | Uint8Array | Readable | 'inherit' | 'pipe';
+    stdout?: Writable | 'inherit' | 'pipe';
+    stderr?: Writable | 'inherit' | 'pipe';
     uid?: number;
     gid?: number;
     shell?: boolean | string;

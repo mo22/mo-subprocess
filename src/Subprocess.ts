@@ -7,9 +7,9 @@ export interface SubprocessArgs {
   environment?: { [key: string]: string; };
   workingDirectory?: string;
   timeout?: number; // ms
-  stdin?: Buffer | Uint8Array | Readable | 'inherit';
-  stdout?: Writable | 'inherit';
-  stderr?: Writable | 'inherit';
+  stdin?: Buffer | Uint8Array | Readable | 'inherit' | 'pipe';
+  stdout?: Writable | 'inherit' | 'pipe';
+  stderr?: Writable | 'inherit' | 'pipe';
   uid?: number;
   gid?: number;
   shell?: boolean | string;
@@ -30,6 +30,8 @@ export class Subprocess {
       return 'ignore';
     } else if (data === 'inherit') {
       return 'inherit';
+    } else if (data === 'pipe') {
+      return 'pipe';
     } else if (data instanceof Uint8Array) {
       return Readable.from(data);
     } else if (data instanceof Readable) {
@@ -44,6 +46,8 @@ export class Subprocess {
       return 'ignore';
     } else if (data === 'inherit') {
       return 'inherit';
+    } else if (data === 'pipe') {
+      return 'pipe';
     } else if (data instanceof Writable) {
       return data;
     } else {
