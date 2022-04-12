@@ -7,7 +7,7 @@ export class WritableLineReader extends WritableLineCallback {
   private lines: string[] = [];
   private signal = new Future<void>();
 
-  public constructor(args: WritableLineReaderArgs) {
+  public constructor(args: WritableLineReaderArgs = {}) {
     super({
       ...args,
       onLine: (line: string) => {

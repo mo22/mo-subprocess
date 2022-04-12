@@ -3,6 +3,6 @@ export declare type WritableLineReaderArgs = Omit<WritableLineCallbackArgs, 'onL
 export declare class WritableLineReader extends WritableLineCallback {
     private lines;
     private signal;
-    constructor(args: WritableLineReaderArgs);
+    constructor(args?: WritableLineReaderArgs);
     readLine(): Promise<string | undefined>;
 }
